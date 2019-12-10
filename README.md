@@ -1,0 +1,1 @@
+Harvard citation style according to the LAMK thesis guidelines
