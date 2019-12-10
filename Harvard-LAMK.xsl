@@ -6105,7 +6105,7 @@
                       </xsl:when>
                     </xsl:choose>
                   </xsl:when>
-                  <xsl:when test ="$countAuthors>3">
+                  <xsl:when test ="$countAuthors>=3">
                     <xsl:choose>
                       <xsl:when test ="count(./b:Source/b:Author/b:Author/b:NameList/b:Person/b:Last)>0">
                         <xsl:value-of select="concat(./b:Source/b:Author/b:Author/b:NameList/b:Person/b:Last, ' et al.')"/>
@@ -6155,7 +6155,7 @@
                       </xsl:when>
                     </xsl:choose>
                   </xsl:when>
-                  <xsl:when test ="$countAuthors>3">
+                  <xsl:when test ="$countAuthors>=3">
                     <xsl:choose>
                       <xsl:when test ="count(./b:Source/b:Author/b:Editor/b:NameList/b:Person/b:Last)>0">
                         <xsl:value-of select="concat(./b:Source/b:Author/b:Editor/b:NameList/b:Person/b:Last, ' et al.')"/>
@@ -6210,7 +6210,7 @@
                       </xsl:when>
                     </xsl:choose>
                   </xsl:when>
-                  <xsl:when test ="$countAuthors>3">
+                  <xsl:when test ="$countAuthors>=3">
                     <xsl:choose>
                       <xsl:when test ="count(./b:Source/b:Author/b:Author/b:NameList/b:Person/b:Last)>0">
                         <xsl:value-of select="concat(./b:Source/b:Author/b:Author/b:NameList/b:Person/b:Last, ' et al.')"/>
@@ -6265,7 +6265,7 @@
                       </xsl:when>
                     </xsl:choose>
                   </xsl:when>
-                  <xsl:when test ="$countAuthors>3">
+                  <xsl:when test ="$countAuthors>=3">
                     <xsl:choose>
                       <xsl:when test ="count(./b:Source/b:Author/b:Composer/b:NameList/b:Person/b:Last)>0">
                         <xsl:value-of select="concat(./b:Source/b:Author/b:Composer/b:NameList/b:Person/b:Last, ' et al.')"/>
@@ -6315,7 +6315,7 @@
                       </xsl:when>
                     </xsl:choose>
                   </xsl:when>
-                  <xsl:when test ="$countAuthors>3">
+                  <xsl:when test ="$countAuthors>=3">
                     <xsl:choose>
                       <xsl:when test ="count(./b:Source/b:Author/b:Conductor/b:NameList/b:Person/b:Last)>0">
                         <xsl:value-of select="concat(./b:Source/b:Author/b:Conductor/b:NameList/b:Person/b:Last, ' et al.')"/>
@@ -6365,7 +6365,7 @@
                       </xsl:when>
                     </xsl:choose>
                   </xsl:when>
-                  <xsl:when test ="$countAuthors>3">
+                  <xsl:when test ="$countAuthors>=3">
                     <xsl:choose>
                       <xsl:when test ="count(./b:Source/b:Author/b:Performer/b:NameList/b:Person/b:Last)>0">
                         <xsl:value-of select="concat(./b:Source/b:Author/b:Performer/b:NameList/b:Person/b:Last, ' et al.')"/>
@@ -6420,7 +6420,7 @@
                       </xsl:when>
                     </xsl:choose>
                   </xsl:when>
-                  <xsl:when test ="$countAuthors>3">
+                  <xsl:when test ="$countAuthors>=3">
                     <xsl:choose>
                       <xsl:when test ="count(./b:Source/b:Author/b:Writer/b:NameList/b:Person/b:Last)>0">
                         <xsl:value-of select="concat(./b:Source/b:Author/b:Writer/b:NameList/b:Person/b:Last, ' et al.')"/>
@@ -6476,7 +6476,7 @@
                     </xsl:choose>
 
                   </xsl:when>
-                  <xsl:when test ="$countAuthors>3">
+                  <xsl:when test ="$countAuthors>=3">
                     <xsl:choose>
                       <xsl:when test ="count(./b:Source/b:Author/b:Artist/b:NameList/b:Person/b:Last)>0">
                         <xsl:value-of select="concat(./b:Source/b:Author/b:Artist/b:NameList/b:Person/b:Last, ' et al.')"/>
@@ -6531,7 +6531,7 @@
                       </xsl:when>
                     </xsl:choose>
                   </xsl:when>
-                  <xsl:when test ="$countAuthors>3">
+                  <xsl:when test ="$countAuthors>=3">
                     <xsl:choose>
                       <xsl:when test ="count(./b:Source/b:Author/b:Interviewee/b:NameList/b:Person/b:Last)>0">
                         <xsl:value-of select="concat(./b:Source/b:Author/b:Interviewee/b:NameList/b:Person/b:Last, ' et al.')"/>
@@ -6586,7 +6586,7 @@
                       </xsl:when>
                     </xsl:choose>
                   </xsl:when>
-                  <xsl:when test ="$countAuthors>3">
+                  <xsl:when test ="$countAuthors>=3">
                     <xsl:choose>
                       <xsl:when test ="count(./b:Source/b:Author/b:Inventor/b:NameList/b:Person/b:Last)>0">
                         <xsl:value-of select="concat(./b:Source/b:Author/b:Inventor/b:NameList/b:Person/b:Last, ' et al.')"/>
