@@ -20,7 +20,7 @@
       </xsl:when>
 
       <xsl:when test="b:XslVersion">
-        <xsl:text>LYON SUN</xsl:text>
+        <xsl:text>2008</xsl:text>
       </xsl:when>
 
       <xsl:when test="b:StyleNameLocalized">
@@ -4304,7 +4304,7 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:when>
-      <xsl:when test="$cAuthors>0 and 5>$cAuthors">
+      <xsl:when test="$cAuthors>0">
         <xsl:for-each select="b:Author/b:Author/b:NameList/b:Person">
           <xsl:variable name ="cAuthorFirstName">
             <xsl:value-of select ="count(b:First)"/>
@@ -4326,7 +4326,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                   <!-- <xsl:call-template name ="templ_prop_ListSeparator"/> -->
-                  <xsl:text>.</xsl:text>
+                  <xsl:text>,</xsl:text>
                   <xsl:call-template name ="templ_prop_Space"/>
                 </xsl:otherwise>
               </xsl:choose>
@@ -4358,6 +4358,11 @@
                 <xsl:when test ="$cAuthorMiddleName=0 and $cAuthors>1 and (position()+1)=$cAuthors">
                   <xsl:call-template name ="templ_prop_Space"/>
                   <xsl:call-template name ="templ_prop_BeforeLastAuthor"/>
+                  <xsl:call-template name ="templ_prop_Space"/>
+                </xsl:when>
+                <xsl:when test ="$cAuthorMiddleName=0 and position()>0 and $cAuthors>position() and $cAuthors>1">
+                  <!-- <xsl:call-template name ="templ_prop_ListSeparator"/> -->
+                  <xsl:text>,</xsl:text>
                   <xsl:call-template name ="templ_prop_Space"/>
                 </xsl:when>
                 <xsl:when test ="$cAuthorMiddleName=0">
@@ -4398,6 +4403,10 @@
                 <xsl:when test ="$cAuthors>1 and (position()+1)=$cAuthors">
                   <xsl:call-template name ="templ_prop_Space"/>
                   <xsl:call-template name ="templ_prop_BeforeLastAuthor"/>
+                  <xsl:call-template name ="templ_prop_Space"/>
+                </xsl:when>
+                <xsl:when test ="$cAuthors>2 and $cAuthors>(position()+1)">
+                  <xsl:text>,</xsl:text>
                   <xsl:call-template name ="templ_prop_Space"/>
                 </xsl:when>
                 <xsl:otherwise>
